@@ -1,0 +1,77 @@
+HTML: HyperText Markup Language
+
+	Necesario determinar el valor del documento (valor de lenguaje) 
+	En este caso es <html lang="es">
+	Al escribir ":html5" o "!" en el editor se incorpora datos que permite dar estructura al archivo
+
+- Identación
+	- Aplicar sucesivos niveles de márgenes de acuerdo a la anidación de etiquetas.
+	
+- Anidación 
+	- Una etiqueta puede contener a la otra
+	
+- Atributos
+	- Variados, el editor de códígo ofrece muchos al llamarlos.
+
+- Estructura base
+
+	- doctype (indica que se está trabajando con html)
+	
+	- head (metadatos de la página) 
+		- Va después de la declaración doctype y etiqueta de apertura
+		- SE USA UNA SOLA VEZ 
+		- Debe tener como mínimo la etiqueta <title>
+		- Puede tener etiquetas <link> para asociar hojas de estilo (CSS)
+		- Puede tener etiquetas <script> para referenciar archivos javascript
+		- Tiene información de funcionamiento para máquinas, buscadores, etc. 
+	
+	- body (contenido visible para el usuario)
+		- Va después de la declaración <head>
+		- Solo puede haber una por documento
+		- Tiene el contenido visible para los usuarios
+	
+- Semántica 
+	- Aplicar la etiqueta apropiada según el sentido del contenido
+		- <header> (cabecera)
+		- <nav>
+		- <main> (solo una vez en el documento)
+		- <section>
+		- <article>
+		- <aside>
+		- <footer>
+		- Etiquetas neutras como <div> (en bloque) y <span> (en línea)
+			Etiquetas sin peso semántico, cuando el objeto no tiene una etiqueta creada para ello.
+
+-Imagenes y multimedia
+
+	<img src="imagen.jpg" alt= "persona caminando">
+		src = source
+		alt= texto alternativo que describe la imagen
+		formato apto
+			jpg para fotos
+			png para colores planos
+	
+	<video src="video.mp4"></video>
+		incluir pista de subtítulos
+		formato apto 
+			mp4
+	
+	<audio src="audio.mp3"></audio>
+		formato apto
+			mp3
+
+- Hipervinculos
+
+- Notas relevantes
+	- Lenguaje marcado 
+		etiquetas
+		atributos
+		comentarios
+	- Se puede anidar
+	- Usamos identación para mejorar su lectura
+	- Se escribe con atención a su semántica
+
+		
+	
+	
+	
