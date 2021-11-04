@@ -1,0 +1,111 @@
+CSS
+	Cascade Style Sheets - Hojas de estilo en cascadas
+
+	/* este es un comentario */
+	.selector {
+		propiedad: valor;
+	}
+
+	- El conjunto es una regla y la propiedad más el valor es una declaración.
+	- Puede haber múltiples selectores y múltiples declaraciones
+	- Escritura
+		- Utilizar minúsculas 
+	
+		- Identar declaraciones dentro de una regla (todas las propiedades añadidas partan en la misma línea)
+			.selector {
+			propiedad: valor;
+		}
+			.card__title,
+			.card__subtitle,
+				font-weight: 800;
+				line-weight: 1.2;
+				
+		- Solo un selector por línea 
+			.selector
+			.card__title
+			.card__subtitle
+			
+		- Dejar un espacio entre el último selector y la llave de inicio
+			.selector {
+			.card__title
+			.card__subtitle {
+			
+		- Dejar un espacio entre los dos puntos y el valor
+			propiedad: valor;
+			font-weight: 800;
+			line-weight: 1.2;
+			margin: 0 0 1rem; 
+	
+	<link>
+		Los archivos CSS se asocian en el archivo html por medio de la etiqueta <link>
+			- Se puede insertar tanto en la sección <head> (recomendado) como en <body> (no tanto)
+			- Se pueden enlazar a multiples hojas de estilo
+			- Las hojas de estilo se guardan en el cache del navegador por lo que optimiza la descarga de la pagina
+		
+		<link rel="stylesheet" href="estilos.css" media="screen">
+			
+			rel="stylesheet" - relación de este archivo con el documento, en este caso css
+			
+			href="estilos.css" - referencias de ubicación
+			
+			media="screen" - va a funcionar para pantallas
+				cambiar por "all" para que funcione en todo
+	
+	<style> (no se recomienda)
+		Se puede insertar tanto en la sección <head> como en <body>
+		Puede haber múltiples declaraciones
+		Permite utilizar todas las posibilidades de CSS
+	
+	Selectores CSS
+		Los selectores definen sobre qué elementos se aplicará un conjunto de reglas CSS. 
+		Sirve como puentes entre la CSS y el doc HTML
+			<!--HTML-->
+			<h1 class="entry-title">Hola mundo</h1>
+			
+			/* CSS */
+			.entry-title {
+				font-size: 2rem;
+				color: #fff;
+			}
+		* Las clases se referencian el selector desde html a css por medio de un punto
+		
+			HTML: <th class="destacado>Azul</th>" / se escribe el valor de la clase dentro del atributo class 
+			
+			CSS: .destacado {
+					border: 2px dashed #666;
+				}
+				
+	Especificidad
+		Jerarquía de aplicación de estilos sobre un elementos
+		
+			<!-- HTML -->
+			<h1 class="entry-title">Hola Mundo</h1>
+			
+			/* CSS */
+			body {
+				color: red;
+			}
+			.entry-title {color: blue;
+			}
+			h1 {color: green;
+			}
+			body h1 {
+				color: purple;
+			}
+
+		Como se calcula la especificidad: 
+			Esto indica el valor de relevancia de cada unidad. 
+			Mientras mayor el valor, el selector aplicará un estilo para ese elemento. 
+			
+			- Elementos, pseudoelementos  1
+			- Clases y pseudoclases y atributos 10
+			- Ids 100
+			- Estilos en línea 1000
+		
+			*Cuando se indica especificidad, el elemento toma las propiedades de la etiqueta 
+	
+	Herencia
+		Indica si el valor de una propiedad es "heredado" de sus elementos padre. Hay aspectos que se heredan y otros que no.
+		* Color se hereda. A menos que se especifique que no sea de dicho color, la propiedad desde que se declara se extiende para todos los elementos.
+		* 
+		
